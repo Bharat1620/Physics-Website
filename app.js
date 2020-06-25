@@ -239,6 +239,10 @@ app.get("/team",function(req,res){
 	res.render("team");
 });
 
+app.get("/about",function(req,res){
+	res.render("about");
+});
+
 //experiments
 app.get('/experiments/:exp',function(req,res){
    var exp = req.params.exp;

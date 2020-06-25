@@ -19,7 +19,7 @@ passport.use(
         // options for google strategy
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: '/auth/google/redirect'
+        callbackURL: 'https://classical-physics.herokuapp.com/auth/google/redirect'
     }, (accessToken, refreshToken, profile, done) => {
         // check if user already exists in our own db
         User.findOne({googleId: profile.id}).then((currentUser) => {

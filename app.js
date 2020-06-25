@@ -184,7 +184,7 @@ app.post('/addVideo', (req, res) => {
 
 
     var videoId = getIdOfYoutubeLink(vlink);
-    var vlinkfinal='http://www.youtube.com/embed/'+videoId;
+    var vlinkfinal='https://www.youtube.com/embed/'+videoId;
 
     VideoLink.findOne({vLink:vlinkfinal}, function(err,link){
 				if(link!==null){

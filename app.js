@@ -123,7 +123,9 @@ app.post("/upload",function(req,res){
 
 			FileName.findOne({fname: name}, function(err,fl){
 				if(fl!==null){
-					res.send("Already present a file with this name.")
+					//res.send("Already present a file with this name.")
+					req.flash("error","Already present a file with this name!");			
+					res.redirect('back');
 				}else {
 
 
@@ -134,7 +136,10 @@ app.post("/upload",function(req,res){
 						FileName.create({fname:name,fieldname:field,name: onlyname},function(err,filename){
 								if(err){
 									console.log(err);
-									res.send("Something went wrong try again to upload!");
+									//res.send("Something went wrong try again to upload!");
+									req.flash("error","Something went wrong while storing filename!");			
+									res.redirect('back');
+
 								}else {
 									console.log(filename);
 
@@ -152,8 +157,10 @@ app.post("/upload",function(req,res){
 									}
 							});
 
-							res.send("Something went wrong");
-
+						//	res.send("Something went wrong");
+						req.flash("error","Something went wrong while storing file!");			
+									res.redirect('back');
+								
 
 
 						}else{
@@ -168,7 +175,9 @@ app.post("/upload",function(req,res){
 
 
 	}else{
-		res.send("Cannot upload your file!");
+		// res.send("Cannot upload your file!");
+		req.flash("error","Your file not Found!");			
+			res.redirect('back');
 	}
 
 });
@@ -188,13 +197,18 @@ app.post('/addVideo', (req, res) => {
 
     VideoLink.findOne({vLink:vlinkfinal}, function(err,link){
 				if(link!==null){
-					res.send("Already present a link with this name !")
+					// res.send("Already present a link with this name !")
+					req.flash("error","Already present this link , Please upload Something new!");			
+						res.redirect('back');
 				}else {
 
 						VideoLink.create({vLink:vlinkfinal,fieldname:field,name:nametoshow},function(err,link){
 								if(err){
 									console.log(err);
-									res.send("Something went wrong try again to ADD link later!");
+									// res.send("Something went wrong try again to ADD link later!");
+											
+									req.flash("error","Something went wrong , try again later!");			
+									res.redirect('back');
 								}else {
 									console.log(link);
 									res.redirect("/");
@@ -256,7 +270,9 @@ app.get("/resources/:cid/notes",function(req,res){
 	console.log(field);
 	FileName.find({fieldname:field},function(err,files){
 		if(err){
-			res.send("Something went wrong");
+			// res.send("Something went wrong");
+			req.flash("error","Something went wrong, Didn't find the file!");			
+			res.redirect('back');
 		}else {
 			// console.log(files);
 			res.render("notes",{files:files});
@@ -269,7 +285,9 @@ app.get("/resources/:cid/videos",function(req,res){
 		var field = req.params.cid;
 		VideoLink.find({fieldname:field},function(err,videos){
 		if(err){
-			res.send("Something went wrong");
+			// res.send("Something went wrong");
+				req.flash("error","Something went wrong!, Didn't find video");		
+									res.redirect('back');
 		}else {
 			// console.log(videos);
 			res.render("videos",{videos:videos});

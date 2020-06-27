@@ -1,48 +1,105 @@
+
 <%- include('partials/header') %>
 
-<title>Upload Videos</title>
+<title>Add Video Lecture</title>
 
 <!-- Here you we will include other css and js files that are not to be used for every age -->
 
+
+<style type="text/css">
+
+
+	.jumbotron {
+ 
+  
+  font-size: 3rem;
+ 
+}
+
+body
+{
+	background-color: black;
+}
+
+label
+{
+	font-size: 3rem;
+	color: white;
+
+
+}
+
+.upload{
+	color:white;
+	
+
+}
+
+
+
+</style>
+
+
+
 </head>
+
+
 <body>
 
 <%- include('partials/navbar') %>
 
+	
+<div class="container">
 
-<center>
+<div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://i.imgur.com/xKrSHaM.png)">
+	<h3 class="upload"> Add Video Lecture Link </h3>
+	<form method="post" action="/addVideo">
+  
 
-	<h1 style="color:black;font-size:45px;text-shadow:2px 1px 1px grey">Add New Video Link</h1>
-	<form method="post" style="border: 1px dotted grey; width:500px;height:400px; background-color:lightblue" action="/addVideo">
-			<br /><br /><br /><br />
-		<input type="text" name="videolink" class="btn btn-lg btn-danger" placeholder="link of video" style="width:400px;height:60px;color:black;background-color:pink" required>
-<br /><br />
-		<input type="text" name="showname" class="btn btn-lg btn-danger" placeholder="Write display name for this video" style="width:400px;height:60px;color:black;background-color:pink" required>
-<br /><br />
-		<select id="fieldnames" class="btn btn-lg btn-danger" name="field_val">
-			<option val="chapter1">Chapter1</option>
-			<option val="chapter2">Chapter2</option>
-			<option val="chapter3">Chapter3</option>
-			<option val="chapter4">Chapter4</option>
-			<option val="chapter5">Chapter5</option>
-			<option val="chapter6">Chapter6</option>
-			<option val="chapter7">Chapter7</option>
-			<option val="chapter8">Chapter8</option>
-			<option val="chapter9">Chapter9</option>
-			<option val="chapter10">Chapter10</option>
-			<option val="chapter11">Chapter11</option>
-			<option val="chapter12">Chapter12</option>
+  		<div class="form-group">
+		    <label for="givename">Give Display Name for the Video</label>
+		    <input type="text" name="showname" placeholder="Write Display Name for this Video"   class="form-control" id="givename"required >
+		  </div>
+  			
+		  <div class="form-group">
+		    <label for="vid">ADD Link</label>
+		    <input type="text" name="videolink" class="form-control" id="vid" placeholder="Paste Link Of Video Lecture" required>
+		  </div>
+		  
+		  
 
+		 <div class="form-group">
+	
+		<label for="fieldnames">Select Chapter</label>
+		<select id="fieldnames"  name="field_val" class="form-control">
+		<option val="chapter1">Chapter1</option>
+		<option val="chapter2">Chapter2</option>
+		<option val="chapter3">Chapter3</option>
+		<option val="chapter4">Chapter4</option>
+		<option val="chapter5">Chapter5</option>
+		<option val="chapter6">Chapter6</option>
+		<option val="chapter7">Chapter7</option>
+		<option val="chapter8">Chapter8</option>
+		<option val="chapter9">Chapter9</option>
+		<option val="chapter10">Chapter10</option>
+		<option val="chapter11">Chapter11</option>
+		<option val="chapter12">Chapter12</option>
 		</select>
-<br /><br /><br />
-		<input type="submit" class="btn btn-lg btn-primary" value="submit">
-	</form>
+
+
+		 </div>
+
+
+ 
+  <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+</form>
+</div>
+</div>
 
 
 
 
-
-	</center>
-		<section></section>
-
+		
 <%- include('partials/footer') %>
+
+

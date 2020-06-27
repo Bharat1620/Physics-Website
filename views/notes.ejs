@@ -12,20 +12,20 @@
 
 <center>
 
-<div class="container" style="margin-left:450px">
+<div class="container" >
 
 <div class="row mb-5">
 
 
           <% files.forEach(function(file){ %>
               <!--Grid column-->
-              <div class="col-lg-6 col-md-12">
+              <div class=" col-md-12">
 
-            <p class="notesname" style="color:black;font-size:25px;text-shadow:2px 1px 1px grey"><%= file.fieldname %> </p>
+            <p class="notesname" style="color:black;font-size:25px;text-shadow:2px 1px 1px grey; display:block;"><%= file.fieldname %> </p>
             <div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
               <div class="responsive-wrapper
                  responsive-wrapper-padding-bottom-90pct"
-                 style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                 style="-webkit-overflow-scrolling: touch; overflow: auto; display:block;">
                  <iframe src="/upload/<%=file.fname%>">
 
                 </iframe>

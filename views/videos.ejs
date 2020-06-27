@@ -3,11 +3,11 @@
 <title>Videos</title>
 
 <link rel="stylesheet" href="/public/stylesheet/videos.css">
-</head>
+</head> 
 <body>
 
 
-
+  
 <%- include('partials/navbar') %>
 
 
@@ -18,43 +18,36 @@
 
 
   <!--Grid row-->
-<center>
+
+  <div class="container videom">
+
+    <center style="margin-bottom:80px;"><h1> VIDEO LECTURES</h1></center>
+
+
+<div class="row mb-5">
     <% if(videos.length===0) {%>
     <section><h1>WILL BE UPLOADED SOON</h1></section>
     <% } %>
-    <% if(videos.length!==0) {%>
-  <div class="container videom">
-
-
-    
-    <h1> VIDEO LECTURES</h1>
-    
-
-<br /><br />
-<div class="row mb-5">
-    
 
 	<% videos.forEach(function(video){ %>
   <!--Grid column-->
-  <div class="col-lg-4 col-md-12" style="margin-left:400px">
+  <div class="col-lg-4 col-md-12" style="margin-left:90px; margin-right:90px;">
 
-    <p class="h5 mb-4" style="color:black;font-size:45px;text-shadow:2px 1px 1px grey"><%= video.name %></p>
-</br></br>
+    <p class="h5 mb-4" style="color:black;font-size:45px;text-shadow:2px 1px 1px grey; text-align:center;"><%= video.name %></p>
 
-    <div class="embed-responsive embed-responsive-16by9 z-depth-1">
-
-        <iframe class="embed-responsive-item" height="101%" src="<%=video.vLink%>" frameborder="3px" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div style="margin-bottom:70px;">
+    <div class="embed-responsive embed-responsive-16by9 z-depth-1" >
+      
+        <iframe class="embed-responsive-item" height="101%" src="<%=video.vLink%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
     </div>
-    <br /><br />
-			<% if(user&&user.admin) {%>
-      <div style="margin-bottom:60px;">
-                                    <form action="/delete/video/<%=video._id%>?_method=delete" method="post">
-                                           <button class="btn btn-lg btn-danger">Remove Video</button>
+			    <% if(user&&user.admin) {%> 
+                                    <form action="/delete/video/<%=video._id%>?_method=delete" method="post" style="display:inline;">
+                                           <center><button class="btn btn-lg btn-danger" style="margin-top:30px;">Remove Video</button></center>
                                     </form>
-      </div>
-                            <% } %>
+          <% }%> 
+            </div>               
 
-
+                           
 
 
   </div>
@@ -67,12 +60,9 @@
   <!--Grid row-->
 
 </div>
- <% } %> 
-</center>
 
 
 
 
-    
 
 <%- include('partials/footer') %>

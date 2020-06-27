@@ -2,64 +2,60 @@
 
 <title>NOTES</title>
 <link rel="stylesheet" href="/public/stylesheet/notes.css">
-</head>
+</head> 
 <body>
 
 
-
+  
 <%- include('partials/navbar') %>
 
-
-<center>
-
-<div class="container" >
-
+<div class="container">
 <div class="row mb-5">
-
-    <% if(files.length===0) {%>
+   <% if(files.length===0) {%>
     <section><h1>WILL BE UPLOADED SOON</h1></section>
     <% } %>
-    
-    
+
 
           <% files.forEach(function(file){ %>
               <!--Grid column-->
-              <div class=" col-md-12">
+              <div class="col-lg-6 col-md-12">
 
-            <p class="notesname" style="color:black;font-size:25px;text-shadow:2px 1px 1px grey; display:block;"><%= file.name %> </p>
+            <p class="notesname" style="color:black;font-size:30px;text-shadow:2px 1px 1px grey; display:block; text-align:center;"><%= file.name %> </p>
             <div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
-              <div class="responsive-wrapper
+              <div class="responsive-wrapper 
                  responsive-wrapper-padding-bottom-90pct"
-                 style="-webkit-overflow-scrolling: touch; overflow: auto; display:block;">
+                 style="-webkit-overflow-scrolling: touch; overflow: auto;">
                  <iframe src="/upload/<%=file.fname%>">
 
                 </iframe>
 
-
+                        
               </div>
             </div>
-                  <div style="margin-bottom:40px;">
-                <a class="btn btn-lg btn-primary" href="/upload/<%=file.fname%>" download="<%=file.fname%>">Download File</a><br /><br />
-                            <% if(user&&user.admin) {%>
-                                    <form action="/delete/notes/<%=file._id%>/<%=file.fname%>?_method=delete" method="post">
-                                           <button class="btn btn-lg btn-danger" style="margin-bottom:40px;">Delete file</button>
+                  
+                  <center style="margin-bottom:50px;">
+                <a class="btn btn-lg btn-primary" href="/upload/<%=file.fname%>" download="<%=file.fname%>" >Download File</a>
+                              <% if(user&&user.admin) {%> 
+                                    <form action="/delete/notes/<%=file._id%>/<%=file.fname%>?_method=delete" method="post" style="display:inline;">
+                                           <button class="btn btn-lg btn-danger" >Delete file</button>
                                     </form>
-                            <% } %>
-                  </div>
+                      <% }%> 
+                      </center>
+                          
 
               </div>
             <%  }) %>
+              
 
 
 
     </div>
-
-
 </div>
 
-              </center>
 
 
-  
+    
 
 <%- include('partials/footer') %>
+
+                                                                                    

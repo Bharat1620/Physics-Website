@@ -35,7 +35,8 @@ set-box-shadow-cicis-menu-to-go {
 */
 .responsive-wrapper {
   position: relative;
-  height: 0;    /* gets height from padding-bottom */
+  height: 0; 
+    /* gets height from padding-bottom */
   overflow: hidden;
   /* put following styles (necessary for overflow and 
      scrolling handling) inline in .embed-responsive-element-wrapper around iframe because not stable in CSS

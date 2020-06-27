@@ -16,6 +16,11 @@
 
 <div class="row mb-5">
 
+    <% if(files.length===0) {%>
+    <section></section>
+    <% } %>
+    
+    
 
           <% files.forEach(function(file){ %>
               <!--Grid column-->

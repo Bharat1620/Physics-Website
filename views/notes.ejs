@@ -33,12 +33,14 @@
 
               </div>
             </div>
-                <a class="btn btn-lg btn-primary" style="margin-bottom:40px;" href="/upload/<%=file.fname%>" download="<%=file.fname%>">Download File</a><br /><br />
+                  <div style="margin-bottom:40px;">
+                <a class="btn btn-lg btn-primary" href="/upload/<%=file.fname%>" download="<%=file.fname%>">Download File</a><br /><br />
                             <% if(user&&user.admin) {%>
                                     <form action="/delete/notes/<%=file._id%>/<%=file.fname%>?_method=delete" method="post">
                                            <button class="btn btn-lg btn-danger" style="margin-bottom:40px;">Delete file</button>
                                     </form>
                             <% } %>
+                  </div>
 
               </div>
             <%  }) %>

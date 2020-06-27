@@ -6,7 +6,10 @@
 <!-- Here you we will include other css and js files that are not to be used for every age -->
 <style>
 	.mainer{
-	background-image : url("../public/team/back.png");
+	
+        background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../public/team/back.png");
+        
+        
         background-repeat: no-repeat;
   background-attachment: fixed;
 	
@@ -26,8 +29,10 @@
 	text-align: center;
 	color:rgb(157, 202, 198);
 	margin-top:0px;
-	padding-top:40px;
-	margin-bottom: 150px;
+	padding-top:250px;
+    font-size:6rem;
+    color:black;
+	
 } /*
 .mainer { 
     position: relative; 
@@ -52,7 +57,7 @@
 } */
 .modifier h2{
 	text-align: center;
-	color:rgb(208, 241, 85);
+	color:#00ABF0;
 	
 }
 .modifier a{
@@ -180,30 +185,12 @@
 	<main class="mainer">
 <div class="modifier">
 
-<h1>Home</h1>
+<h1>WELCOME TO CLASSICAL PHYSICS COURSE </h1>
+    <h2>THE LNMIIT, JAIPUR</h2>
 	
     
     
-    
-	<h2>
-		From here you can download the resources
-	</h2>
-    <a href="/resources" class="btn btn-lg btn-primary ">Resources</a>
-    <% if(user&&user.admin) {%>
-       
 
-
-	<a href="/upload" class="btn btn-lg btn-primary">Let's Upload</a>
-
-    <% } %>
-
-        <% if(user&&user.admin) {%>
-
-
-
-	<a href="/addVideo" class="btn btn-lg btn-danger">Add Video Lecture Link</a>
-
-    <% } %>
 </div>
 </main>
 <div class="container">
@@ -256,12 +243,42 @@
 					<img src="https://images.unsplash.com/photo-1525207106105-b340f7384b30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Avatar Placeholder" />
 				</div>
 				<div class="flip-card-text">
-					<a href="/team"><h2 style="text-align: center;">Team</h2></a>
+					<a href="/resources"><h2 style="text-align: center;">Resources</h2></a>
 					
 				</div>
 			
 		</div>
 	</div>
+  
+    
+    <div class="flip-card">
+		
+			<div class="flip-card-front">
+				<div class="flip-card-img">
+					<img src="https://images.unsplash.com/photo-1525207106105-b340f7384b30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Avatar Placeholder" />
+				</div>
+				<div class="flip-card-text">
+					<a href="/upload"><h2 style="text-align: center;">Let's Upload</h2></a>
+					
+				</div>
+			
+		</div>
+	</div>
+    
+    <div class="flip-card">
+		
+			<div class="flip-card-front">
+				<div class="flip-card-img">
+					<img src="https://images.unsplash.com/photo-1525207106105-b340f7384b30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Avatar Placeholder" />
+				</div>
+				<div class="flip-card-text">
+					<a href="/addvideo"><h2 style="text-align: center;">Add Video</h2></a>
+					
+				</div>
+			
+		</div>
+	</div>
+    
 </div>
 
 <%- include('partials/footer') %>

@@ -19,14 +19,20 @@
 
   <!--Grid row-->
 <center>
+    <% if(videos.length===0) {%>
+    <section><h1>WILL BE UPLOADED SOON</h1></section>
+    <% } %>
+    <% if(videos.length!==0) {%>
   <div class="container videom">
 
 
-
+    
     <h1> VIDEO LECTURES</h1>
+    
 
 <br /><br />
 <div class="row mb-5">
+    
 
 	<% videos.forEach(function(video){ %>
   <!--Grid column-->
@@ -41,9 +47,11 @@
     </div>
     <br /><br />
 			<% if(user&&user.admin) {%>
+      <div style="margin-bottom:60px;">
                                     <form action="/delete/video/<%=video._id%>?_method=delete" method="post">
                                            <button class="btn btn-lg btn-danger">Remove Video</button>
                                     </form>
+      </div>
                             <% } %>
 
 
@@ -59,11 +67,12 @@
   <!--Grid row-->
 
 </div>
+ <% } %> 
 </center>
 
 
 
 
-    <section></section>
+    
 
 <%- include('partials/footer') %>

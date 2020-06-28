@@ -5,25 +5,65 @@
 
 <!-- Here you we will include other css and js files that are not to be used for every age -->
 <style>
-	.mainer{
-	
-        background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("../public/team/back.png");
-        
-        
-        background-repeat: no-repeat;
+
+#hero-area {
+  background: url('../public/team/lnmiit.jpg') no-repeat 50%;
+  background-size: cover;
   background-attachment: fixed;
-	
-	height: 100vh;
-    width: 100%;
-	margin-bottom: 15px;
-	margin-top: -20px;
-	position: relative;
-    font-family: Heletica;
-    text-transform: uppercase;
-    font-weight: lighter;
-    justify-content: center;
-    
-} 
+  padding: 230px 0;
+  margin-bottom: 15px;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+#hero-area:before {
+  content: '';
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#hero-area .block {
+  position: relative;
+  z-index: 999;
+}
+#hero-area h1 {
+  font-size: 45px;
+  
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+
+}
+
+#hero-area h2 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 38px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 25px;
+}
+
+p{
+	font-size: 18px; 
+}
+
+#seeall{
+	padding:100px;
+}
+
+#contm{
+	background: #f0f0f5;
+	margin-bottom: 50px;
+}
+
 .modifier h1{
     
 	text-align: center;
@@ -72,9 +112,14 @@
 	cursor: pointer;
 	
 }
+
+b{
+	color: #1a75ff !important; 
+}
+
 /*.container{
    background: -webkit-linear-gradient(140deg, #9eeaee 0.42%, #ffffff);
-	background: linear-gradient(140deg, #9eeaee 0.42%, #ffffff);  
+	 
     margin-bottom:10px;
 }*/
 .container h1{
@@ -162,11 +207,6 @@
 		5px solid lightgray;
 	background-color: white;
 }
-    body
-    {
-     background: -webkit-linear-gradient(140deg, #9eeaee 0.42%, #ffffff);
-	background: linear-gradient(140deg, #9eeaee 0.42%, #ffffff);
-    }
     
 @media (max-width: 1028px) {
 
@@ -190,44 +230,83 @@
 
 <%- include('partials/navbar') %>
 
-
-
-
-
-
-
-
-	<main class="mainer">
-<div class="modifier">
-
-<h1>WELCOME TO CLASSICAL PHYSICS COURSE </h1>
-    <h2>THE LNMIIT, JAIPUR</h2>
 	
-    
-    
+        <section id="hero-area" >
+            <div class="block wow fadeInUp" data-wow-delay=".3s">
+                     <div >
+                        <h1>
+                        <span>WELCOME TO CLASSICAL PHYSICS COURSE</span><br>
+                        <span>
+                        <b >THE LNMIIT, JAIPUR</b>
+                        </span>
+                        </h1>
+                     </div> 
+                           
+            </div>
+        </section><!--/#main-slider-->
 
+<div class="ml-4 mr-4" id="seeall">
+<div class="container text-centr p-5 bg-light mt-5">
+	<div class="row">
+		
+		<div class="col-md-6">
+			<h1>VISION</h1>
+			
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+		</div>
+		<div class="col-md-6">
+			<img src="../public/team/vision.jpg" class="img-fluid">
+		</div>
+		
+	</div>
+	
 </div>
-</main>
-<div class="container">
-	<h1 style="text-align: center;">Our Fields</h1>
+</div>
+
+<div class="ml-4 mr-4" id="seeall">
+<div class="container text-centr p-5 bg-light mt-5">
+	<div class="row">
+		<div class="col-md-6">
+			<img src="../public/team/values.jpg" class="img-fluid">
+		</div>
+		<div class="col-md-6">
+			<h1>VALUES</h1>
+			
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+		</div>
+		
+		
+	</div>
+	
+</div>
+</div>
+
+<div id="contm" class="container" >
+	<h1 style="text-align: center;">OUR FIELDS</h1>
+
 		<div class="flip-card">
 		
 			<div class="flip-card-front">
 				<div class="flip-card-img">
-					<img src="/public/team/about1.jpg" />
+				<a href="/resources">
+					<img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=541&q=80" alt="Avatar Placeholder" />
+				</a>	
 				</div>
 				<div class="flip-card-text">
-					<a href="/about"><h2 style="text-align: center;">About Us</h2></a>
+					<a href="/resources"><h2 style="text-align: center;">Resources</h2></a>
 					
 				</div>
 			
 		</div>
 	</div>
 
+
 	<div class="flip-card">
 			<div class="flip-card-front">
 				<div class="flip-card-img">
+				<a href="/instructor">
 					<img src="/public/team/instructor1.jpg" alt="Avatar Placeholder" />
+				</a>
 				</div>
 				<div class="flip-card-text">
                     <a href="/instructor"><h2 style="text-align: center;">Instructor</h2></a>
@@ -241,7 +320,9 @@
 		
 			<div class="flip-card-front">
 				<div class="flip-card-img">
+				<a href="/contact">
 					<img src="/public/team/contact.jpg" alt="Avatar Placeholder" />
+				</a>
 				</div>
 				<div class="flip-card-text">
 					<a href="/contact"><h2 style="text-align: center;">Contact</h2></a>
@@ -251,49 +332,6 @@
 		</div>
 	</div>
 
-	<div class="flip-card">
-		
-			<div class="flip-card-front">
-				<div class="flip-card-img">
-					<img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=541&q=80" alt="Avatar Placeholder" />
-				</div>
-				<div class="flip-card-text">
-					<a href="/resources"><h2 style="text-align: center;">Resources</h2></a>
-					
-				</div>
-			
-		</div>
-	</div>
-  
-    <% if(user&&user.admin) {%>
-    <div class="flip-card">
-		
-			<div class="flip-card-front">
-				<div class="flip-card-img">
-					<img src="https://images.unsplash.com/photo-1562240020-ce31ccb0fa7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80" alt="Avatar Placeholder" />
-				</div>
-				<div class="flip-card-text">
-					<a href="/upload"><h2 style="text-align: center;">Let's Upload</h2></a>
-					
-				</div>
-			
-		</div>
-	</div>
-    
-    <div class="flip-card">
-		
-			<div class="flip-card-front">
-				<div class="flip-card-img">
-					<img src="/public/team/addvideo.jpg" alt="Avatar Placeholder" />
-				</div>
-				<div class="flip-card-text">
-					<a href="/addvideo"><h2 style="text-align: center;">Add Video</h2></a>
-					
-				</div>
-			
-		</div>
-	</div>
-    <% } %>
     
 </div>
 

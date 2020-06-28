@@ -6,8 +6,6 @@
 
 	/*cards*/
 .container{
-   background: -webkit-linear-gradient(140deg, #9eeaee 0.42%, #ffffff);
-	background: linear-gradient(140deg, #9eeaee 0.42%, #ffffff);  
     margin-bottom:10px;
 }
 .container h1{
@@ -586,8 +584,6 @@ main{
 	text-decoration: none;
 	font-family: helvetica;
 	padding-left: 20px;
-    background: -webkit-linear-gradient(140deg, #9eeaee 0.42%, #ffffff);
-	background: linear-gradient(140deg, #9eeaee 0.42%, #ffffff);
 }
 main h1{
 	padding-top: 10px;

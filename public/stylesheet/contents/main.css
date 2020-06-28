@@ -105,3 +105,11 @@ section {
 footer {
   border-top: 1px solid #c1e1ec;
 }
+.navbar-brand{
+margin-top:10px;
+}
+
+.nav-link{
+font-size:1.8rem;
+    margin-top:10px;
+}

@@ -17,7 +17,7 @@
 			<li class="nav-item"><a href="/" class="nav-link">Home</a></li>
 			<li class="nav-item"><a href="/about" class="nav-link">About</a></li>			
 			<li class="nav-item"><a href="/team" class="nav-link">Team</a></li>
-			<li class="nav-item"><a href="/profile" class="nav-link">Profile</a></li>
+			
             
 			<li class="nav-item"><a href="/instructor" class="nav-link">Instructor</a></li>
 			<li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
@@ -29,12 +29,12 @@
             <li class="nav-item"><a href="/" class="nav-link">Welcome, <%=user.username%></a></li>
 			<li class="nav-item">
 				<!-- <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="/auth/logout">Loggout</a> -->
-				<a class="nav-link btn btn-primary get-started-btn mt-1 mb-1" href="/auth/logout">Logout</a>
+				<a class="nav-link btn btn-primary get-started-btn mt-1 mb-1 " href="/auth/logout">Logout</a>
 			</li>
 					<% } else { %>
 			<li class="nav-item">
 				<!-- <a href="/auth/login" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1 nav-link">Login</a> -->
-					<a class="nav-link btn btn-primary get-started-btn mt-1 mb-1" href="/auth/login">Login</a>
+					<a class=" nav-link btn  get-started-btn mt-1 mb-1 " href="/auth/login" style="background:red; font-size:1.5rem; color:white;"><i class="fa fa-fw fa-google"></i> Login with Google</a>
 			</li>
 			 <% } %>
 		</ul>

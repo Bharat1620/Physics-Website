@@ -22,6 +22,11 @@
 		border-bottom: 1px solid #dfe3e8;
 		border-radius: 0;
 	}
+    .nav-link
+    {
+        font-size:1.8rem;
+        margin-top: 10px;
+    }
 	.nav-link img {
 		border-radius: 50%;
 		width: 36px;
@@ -32,6 +37,7 @@
 	}
 	.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
 		padding-left: 0;
+        margin-top:10px;
 		font-size: 20px;
 		padding-right: 50px;
 	}

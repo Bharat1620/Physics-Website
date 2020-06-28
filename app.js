@@ -4,7 +4,7 @@ const express = require('express');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const authRoutes = require('./routes/authroutes');
-const profileRoutes = require('./routes/profileroutes');
+
 const passportSetup = require('./configure/passportsetup');
 const mongoose = require('mongoose');
 
@@ -61,7 +61,7 @@ mongoose.connect( process.env.DBURI,{ useNewUrlParser: true ,useCreateIndex: tru
 
 // set up routes
 app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes);
+
 
 // create home route
 app.get('/', (req, res) => {
